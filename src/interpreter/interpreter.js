@@ -7,7 +7,7 @@ import { BUILT_IN_INSTRUCTIONS } from "./BUILT_IN_INSTRUCTIONS.js";
 import { BINARY_OPERATIONS, UNARY_OPERATIONS, VALUE, createFieldReference, createValue, destructureValue } from "./interpreterUtils.js";
 
 
-export default function execute(executable, ...programArguments) {
+export default function execute(executable, programArguments) {
   if( !executable )
   throwFatalError(ERRORS.runtime, ERRORS.runtime.nullExecutable);
 
