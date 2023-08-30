@@ -17,7 +17,3 @@ technically possible, at least to some extent.
 A full re-write is to be expected later on as this project serves as more of an experiment in writing a scripting language
 with the complex features of a procedural programming language rather than a good stand-alone project due to its many 
 issues.
-
-## Updates
-
-Version 1.0.0 has now been released which comes with the following features:
