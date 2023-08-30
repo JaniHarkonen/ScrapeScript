@@ -29,8 +29,11 @@ export const compileFile = (sourceFile) => {
  * compiled and ran.
  * @param  {...any} programArguments Program arguments to be 
  * passed onto the program.
+ * 
+ * @returns The result yielded by the program or `undefined` if
+ * `yield` was not called.
  */
 export const compileAndRun = (sourceFile, ...programArguments) => {
   const executable = compileFile(sourceFile);
-  execute(executable, programArguments);
+  return execute(executable, programArguments);
 };
