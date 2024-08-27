@@ -121,8 +121,8 @@ while( true )
 
       // Symbol has been scraped -> push
   const symbol = {
-    companyName: companyName,
-    stockSymbol: stockSymbol,
+    name: companyName,
+    ticker: stockSymbol,
     pricePerShare: parseNumber(replace(pricePerShare, ",", ".")),
     volume: parseNumber(replace(volume, ",", "."))
   };
