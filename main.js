@@ -1,13 +1,24 @@
 import fs from "fs";
 import { compileAndRun } from "./ScrapeScript.js";
+import { testConfig } from "./tests/testConfig.js";
 
+
+// WARNING!! testConfig.js IS GITIGNORED AS IT IS CONSIDERED TO BE USER-SPECIFIC!
+// IN ORDER TO RUN THIS CONFIGURATION OF ScrapeScript, DOWNLOAD THE KAUPPALEHTI
+// WEBPAGE AS AN HTML-FILE AND CREATE THE FOLLOWING FILE
+// src/tests/testConfig.js : 
+// 
+// export const testConfig = {
+//   scraper: "name of the scraper's .ss-file inside tests-folder",
+//   dataset: "path to the downloaded Kauppalehti webpage"
+// }
 
 const testFolder = process.cwd() + "\\tests\\";
-const ssFile = testFolder + "test2.ss";
+const ssFile = testFolder + testConfig.scraper;
 
 const now = performance.now();
-const readFile = fs.readFileSync("D:\\javascript\\ScrapeScript\\src\\tests\\stocks4.html").toString();
+const readFile = fs.readFileSync(testConfig.dataset).toString();
+
 const result = compileAndRun(ssFile, readFile);
 console.log("Compiled and executed in :" + (performance.now() - now) + " ms.");
 console.log(result);
-//fs.writeFileSync("D:\\javascript\\sketching\\parsers-again\\letsgo\\tests\\dump.json", JSON.stringify(result, null, 2));
