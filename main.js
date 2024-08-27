@@ -9,7 +9,7 @@ import { testConfig } from "./tests/testConfig.js";
 // src/tests/testConfig.js : 
 // 
 // export const testConfig = {
-//   scraper: "test2.ss",
+//   scraper: "name of the scraper's .ss-file inside tests-folder",
 //   dataset: "path to the downloaded Kauppalehti webpage"
 // }
 
