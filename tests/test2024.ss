@@ -64,7 +64,8 @@ const output = {
 
 let cursor = indexOf(INPUT, "Päivitetty", 1);
 let copy = null;
-const tag = '<a href="https://www.kauppalehti.fi/porssi/porssikurssit/osake/';
+//const tag = '<a href="https://www.kauppalehti.fi/porssi/porssikurssit/osake/';
+const tag = 'https://www.kauppalehti.fi/porssi/porssikurssit/osake/';
 while( true )
 {
   let stockSymbol = '';
